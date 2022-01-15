@@ -22,6 +22,11 @@
     color: #fff;
     text-decoration: none;
 }  
+.cmn-btn:hover{
+    background-color: white;
+    color: var(--red-color);
+    border: 1px solid var(--red-color);
+}
 
 
 
@@ -47,6 +52,10 @@
         margin-left: 15px;
         font-size: 20px;
         color: var(--red-color);
+    }
+    nav ul li a:hover{
+        color: #000;
+        
     }
       
       
@@ -86,7 +95,7 @@
 
 
 .container{
-    width:980px;
+    max-width:980px;
     display: flex;
     justify-content: center;
     margin-top: 150px;
@@ -102,12 +111,17 @@
     margin: 20px 15px;
     width: 84px;
     height: 26px;
+    transition: transform 0.3s ease;
+}
+
+.company-logo img:hover{
+    transform: scale(1.5);
 }
 
 
 /* Collections */
 
-.collections h2{
+.titel{
     text-align: center;
     font-weight: 600;
     font-size: 28px;
@@ -123,18 +137,24 @@
     border: 1px solid #d1d1d1;
     padding: 10px;
     border-radius: 8px;
+    overflow: hidden;
+    
 }
 .item-photo img{
     width: 300px;
     height: 256px;
     margin-bottom: 16px;
+    transition: transform .3s ease;
+}
+.item:hover>.item-photo img{
+    transform: translateY(-10px);
 }
 .item-details{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
-.item-details h3{
+.h3-titel{
     font-size: 28px;
     margin: 0;
     font-weight: 500;
@@ -165,6 +185,41 @@
     line-height: 24px;
     cursor: pointer;
 }
+.collections>p:hover{
+    color: grey;
+}
+
+
+/* Work section */
+.important-works{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.work{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d1d1d1;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.work:hover{
+   box-shadow: 10px 10px 30px grey;
+}
+.work-icon{
+    font-size: 90px;
+    color: var(--red-color);
+    text-align: center;
+}
+.work-details .h3-titel{
+    text-align: center;
+}
+.work-details p{
+    font-size: 14px;
+    text-align: center;
+}
 
 
     /* Footer */
@@ -174,6 +229,7 @@
         color: white;
         text-align: center;
         padding: 50px;
+        margin-top: 70px;
     }
     .footer h4{
         font-weight: bold;
@@ -187,6 +243,105 @@
         margin: 0;
     }
     .social-icon .fab{
-        margin-right: 16px;
+        margin-right: 20px;
         margin-top: 10px;
+        
+        font-size: 20px;
     }
+   
+
+
+    /*-------------
+     Media Quarei 
+     --------------*/
+
+     /* Mobile device */
+
+     @media only screen and (max-width:680px){
+         *{
+             margin: 0;
+         }
+         .top-header{
+             background: none;
+         }
+
+        nav{
+            display: none;
+        }
+        .top-header{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 100%;
+        } 
+        .col-2{
+            width: 100%;
+        }
+        .col-2 img{
+            width: 100%;
+            margin-left: 0px;
+        }
+        .col-2 h1{
+            font-size: 40px;
+        }
+        .col-2 p{
+            margin-bottom: 20px;
+        }
+        .container{
+            width: 100%;
+            margin-left: 20px;
+        }
+        .collection{
+            grid-template-columns: repeat(1,1fr);
+        }
+        .important-works{
+            grid-template-columns: repeat(1,1fr);
+        }
+         }
+         
+
+          /* Tablet device */
+
+     @media only screen and (min-width:681px) and (max-width:980px){
+        *{
+            margin: 0;
+        }
+        .top-header{
+            background: none;
+        }
+
+       nav{
+           display: none;
+       }
+       .top-header{
+           display: flex;
+           justify-content: space-between;
+           flex-direction: column;
+           width: 100%;
+       } 
+       .col-2{
+           width: 100%;
+       }
+       .col-2 img{
+           width: 100%;
+           margin-left: 0px;
+       }
+       .col-2 h1{
+           font-size: 40px;
+       }
+       .col-2 p{
+           margin-bottom: 20px;
+       }
+       .container{
+           width: 100%;
+           margin-left: 20px;
+       }
+       .collection{
+           grid-template-columns: repeat(2,1fr);
+       }
+       .important-works{
+           grid-template-columns: repeat(2,1fr);
+       }
+        }
+        
+     
