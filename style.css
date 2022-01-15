@@ -55,12 +55,10 @@
     }
     nav ul li a:hover{
         color: #000;
-        
     }
       
-      
 
-      /* Top Header section */
+            /*---Top Section ----*/
 
 .top-header{
     display: flex;
@@ -91,11 +89,10 @@
     margin-left: 20px;
 }
 
-/* Company Logo  */
-
+                /*------Company Logo-----*/
 
 .container{
-    max-width:980px;
+    max-width:80%;
     display: flex;
     justify-content: center;
     margin-top: 150px;
@@ -119,7 +116,7 @@
 }
 
 
-/* Collections */
+                /*------Collections------*/
 
 .titel{
     text-align: center;
@@ -138,11 +135,11 @@
     padding: 10px;
     border-radius: 8px;
     overflow: hidden;
+    margin: 0;
     
 }
 .item-photo img{
-    width: 300px;
-    height: 256px;
+    width: 100%;
     margin-bottom: 16px;
     transition: transform .3s ease;
 }
@@ -190,7 +187,8 @@
 }
 
 
-/* Work section */
+                    /*-----Work section-----*/
+
 .important-works{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -222,7 +220,7 @@
 }
 
 
-    /* Footer */
+                            /*-----Footer-----*/
 
     footer{
         background:#0A0826 ;
@@ -230,6 +228,7 @@
         text-align: center;
         padding: 50px;
         margin-top: 70px;
+        
     }
     .footer h4{
         font-weight: bold;
@@ -245,17 +244,16 @@
     .social-icon .fab{
         margin-right: 20px;
         margin-top: 10px;
-        
         font-size: 20px;
     }
    
 
 
-    /*-------------
-     Media Quarei 
-     --------------*/
+                                     /*-------------
+                                         Media Quarei 
+                                      --------------*/
 
-     /* Mobile device */
+            /*------Mobile device--------*/
 
      @media only screen and (max-width:680px){
          *{
@@ -264,7 +262,6 @@
          .top-header{
              background: none;
          }
-
         nav{
             display: none;
         }
@@ -300,7 +297,9 @@
          }
          
 
-          /* Tablet device */
+          /*-----Tablet device------*/
+
+
 
      @media only screen and (min-width:681px) and (max-width:980px){
         *{
@@ -323,7 +322,7 @@
            width: 100%;
        }
        .col-2 img{
-           width: 100%;
+           width: 80%;
            margin-left: 0px;
        }
        .col-2 h1{
@@ -331,6 +330,7 @@
        }
        .col-2 p{
            margin-bottom: 20px;
+           width: 80%;
        }
        .container{
            width: 100%;
